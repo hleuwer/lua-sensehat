@@ -8,7 +8,7 @@ print("Waiting for events. Move the joystick. Loop will stop after 5 captured ev
 local n = 0
 while n < 5 do
    local joy = sense.stick.waitEvent()
-   print("detected with joystick: ", joy)
+   print("detected with joystick: ", joy, joy.direction, joy.action)
    n = n + 1
 end
 

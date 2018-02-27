@@ -243,11 +243,11 @@ local cbtab = {
 
 stick = {
    waitEvent = function()
-      return py.eval("sense.stick.wait_for_event()")
+      return py.asattr(py.eval("sense.stick.wait_for_event()"))
    end,
 
    getEvents = function()
-      return py.eval("sense.stick.get_events()")
+      return py.asattr(py.eval("sense.stick.get_events()"))
    end,
 
    callback = function(event, dir)
