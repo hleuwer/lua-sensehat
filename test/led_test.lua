@@ -41,18 +41,30 @@ step("led on")
 sense.ledOn()
 socket.sleep(0.5)
 
+
+step("show 9")
+sense.showLetter("9")
+
+step("rotate 90")
+sense.rotation(90, true)
+
+step("rotate 0")
+sense.rotation(0, true)
+
 step("checkerboard")
 sense.setPixels(sense.pattern.checkerboard)
 
 step("flip horizontal")
-sense.flipV(true)
-
-step("flip vertical")
 sense.flipH(true)
 
-step("rotate once")
-sense.rotation(90, true)
+step("flip horizontal back")
+sense.flipH(true)
 
+step("flip vertical")
+sense.flipV(true)
+
+step("flip vertical back")
+sense.flipV(true)
 step("rotate multiple times")
 sense.setPixels(ellipse)
 for i = 1, 10 do
